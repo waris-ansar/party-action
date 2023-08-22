@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
-function Home() {
+function Home({active, setActiveSection}) {
   return (
-    <section className="home active translate-x-0 translate-y-0">
+    <section className={`home translate-x-0 translate-y-0 ${active === "home" && "active"}`}>
       <div className="container justify-between flex-col">
         <div className="top flex flex-col justify-center flex-1 min-h-[350px] px-6">
           <h3 className="font-satoshi text-6xl text-white font-medium">

@@ -5,14 +5,14 @@ import Schedule from './contentbody/Schedule';
 import About from './contentbody/About';
 import Contact from './contentbody/Contact';
 
-function Mainbody() {
+function Mainbody({active, setActiveSection}) {
   return (
     <div className='absolute top-0 left-20 bottom-0 right-0 overflow-hidden'>
-      <Home />
-      <Work />
-      <Schedule />
-      <About />
-      <Contact />
+      <Home active={active}/>
+      <Work active={active} setActiveSection={setActiveSection}/>
+      <Schedule active={active} setActiveSection={setActiveSection}/>
+      <About active={active} setActiveSection={setActiveSection}/>
+      <Contact active={active} setActiveSection={setActiveSection}/>
     </div>
   )
 }

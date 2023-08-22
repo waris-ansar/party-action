@@ -1,21 +1,21 @@
 import React from 'react'
 import Image from 'next/image'
 
-function About() {
+function About({active, setActiveSection}) {
   return (
     <section
     id="third"
     className="opacity-100"
     style={{ transform: "translate3d(100%, 0px, 0px)" }}
   >
-    <div className="sec-header">
+    <div className="sec-header" onClick={() => setActiveSection("about")}>
       <span className="absolute top-9 left-0 right-0 text-center text-white text-2xl font-satoshi font-medium">03</span>
       <span className="absolute bottom-9 text-white text-2xl font-satoshi font-medium text-header-menu">About</span>
     </div>
 
     
     <div className="sec-body">
-      <div className="container justify-between flex-col">
+      <div className={`container justify-between flex-col ${active === "about" && "active"}`}>
         <div className="top flex flex-col items-stretch flex-1 min-h-[350px] px-6">
           <h3 className="font-satoshi text-6xl text-white font-medium">
             Technical conferences at the heart of DeFi
