@@ -5,8 +5,8 @@ function Contact({active, setActiveSection}) {
   return (
     <section
       id="fourth"
-      className="opacity-100"
-      style={{ transform: "translate3d(100%, 0px, 0px)" }}
+      className={`opacity-100 slide-in ${active === 'contact' && "active"}`}
+      // style={{ transform: "translate3d(100%, 0px, 0px)" }}
     >
       <div className="sec-header" onClick={() => setActiveSection('contact')}>
         <span className="absolute top-9 left-0 right-0 text-center text-white text-2xl font-satoshi font-medium">04</span>
