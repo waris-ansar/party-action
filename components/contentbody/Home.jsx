@@ -1,14 +1,42 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import gsap from "gsap";
 
-function Home({active, setActiveSection}) {
+function Home({ active, setActiveSection }) {
+  const words = ["DeFi", "Blockchain", "oracles", "stablecoins"];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
+    }, 2000); // Adjust the time (in milliseconds) for each word to stay on screen
+
+    return () => clearInterval(interval);
+  }, []);
   return (
-    <section className={`home translate-x-0 translate-y-0 ${active === "home" && "active"}`}>
+    <section
+      className={`home translate-x-0 translate-y-0 ${
+        active === "home" && "active"
+      }`}
+    >
       <div className="container justify-between flex-col">
         <div className="top flex flex-col justify-center flex-1 min-h-[350px] px-6">
-          <h3 className="font-satoshi text-6xl text-white font-medium">
-            Technical conferences at the heart of DeFi
+          <h3 className="font-satoshi text-[3.2rem] text-white font-medium w-fit">
+            Technical conferences at the heart of
+            <span className="animation-container ml-[10px]">
+              {words.map((word, index) => (
+                <span
+                  key={index}
+                  className={`animated-word text-white  ${
+                    index === currentIndex ? "visible" : ""
+                  }`}
+                >
+                  {word}
+                </span>
+              ))}
+            </span>
           </h3>
+
           <div className="flex flex-row mt-11">
             <div className="w-36 h-12">
               <Image
@@ -36,9 +64,15 @@ function Home({active, setActiveSection}) {
             / marketing / pr
           </p>
           <div>
-            <p className="font-satoshi text-base text-white font-normal text-right pt-1">Party Action People Pte. Ltd.</p>
-            <p className="font-satoshi text-base text-white font-normal text-right pt-1">Seletar, Singapore</p>
-            <p className="font-satoshi text-base text-white font-normal text-right pt-1">t.me/partyactionpeople</p>
+            <p className="font-satoshi text-base text-white font-normal text-right pt-1">
+              Party Action People Pte. Ltd.
+            </p>
+            <p className="font-satoshi text-base text-white font-normal text-right pt-1">
+              Seletar, Singapore
+            </p>
+            <p className="font-satoshi text-base text-white font-normal text-right pt-1">
+              t.me/partyactionpeople
+            </p>
           </div>
         </div>
       </div>
