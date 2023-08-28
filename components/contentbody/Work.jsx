@@ -6,7 +6,7 @@ function Work({ active, setActiveSection }) {
     <section
       id="first"
       className={`opacity-100 slide-in  ${
-        active === "work" && "active work-sec"
+        (active === "work" || active === "schedule" || active === "about" || active === "contact") && "active"
       }`}
       //   style={{ transform: "translate3d(100%, 0px, 0px)" }}
     >

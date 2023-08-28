@@ -6,7 +6,7 @@ function Schedule({ active, setActiveSection }) {
     <section
       id="second"
       className={`opacity-100 slide-in ${
-        active === "schedule" && "active secdule"
+        (active === "schedule" || active === "about" || active === "contact") && "active secdule"
       }`}
       // style={{ transform: "translate3d(100%, 0px, 0px)" }}
     >

@@ -48,7 +48,7 @@ section {
 #first {
   left: calc(80px * 2);
 }
-.active #first {
+.active#first {
   left: calc(80px * 1);
 }
 .work {
@@ -67,7 +67,7 @@ section {
   left: calc(80px * 4);
 }
 .active#third {
-  left: calc(80 * 3);
+  left: calc(80px * 3) !important;
 }
 .secdule {
   left: calc(80px * 2) !important;
@@ -76,7 +76,7 @@ section {
   left: calc(80px * 5);
 }
 .active#fourth {
-  left: calc(80 * 4);
+  left: calc(80px * 4) !important;
 }
 
 .sec-header {

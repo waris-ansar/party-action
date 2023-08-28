@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import gsap from "gsap";
 
 function Home({ active, setActiveSection }) {
   const words = ["DeFi", "Blockchain", "oracles", "stablecoins"];
