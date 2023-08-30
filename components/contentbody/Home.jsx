@@ -36,19 +36,28 @@ function Home({ active, setActiveSection }) {
             </span>
           </h3>
 
-          <div className="flex flex-row mt-11">
-            <div className="w-36 h-12">
+          <div className="flex flex-row mt-11 items-center">
+            <div className="w-36 ">
               <Image
-                src={"/assets/images/boss.svg"}
+                src={"/assets/images/stable.svg"}
                 width={0}
                 height={0}
                 alt="logo"
                 style={{ width: "100%" }}
               />
             </div>
-            <div className="w-36 h-12 ml-6">
+            <div className="w-36  ml-6">
               <Image
-                src={"/assets/images/stable.svg"}
+                src={"/assets/images/unstable.svg"}
+                width={0}
+                height={0}
+                alt="logo"
+                style={{ width: "100%" }}
+              />
+            </div>
+            <div className="w-36  ml-6">
+              <Image
+                src={"/assets/images/Boss.svg"}
                 width={0}
                 height={0}
                 alt="logo"
