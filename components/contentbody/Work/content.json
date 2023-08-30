@@ -1,0 +1,72 @@
+[
+  {
+    "key": "1",
+    "title": "What we offer to our Clients?",
+    "desc": "We provide clients with full suite white label event production, including:",
+    "list": [
+      "Event Conceptualisation",
+      "Project Management",
+      "Budgeting and Financial Management",
+      "Research and interviews with KOLs",
+      "Agenda Design",
+      "Speaker/Sponsor Recruitment & Management",
+      "Stage Management & Audio/Visual/Lights/Livestream",
+      "Ticketing/CS",
+      "Branding/Marketing/Sales",
+      "Partnerships/PR/Media",
+      "Talent, Venue & Supplier Procurement & Management",
+      "Off-ramping/payouts"
+    ]
+  },
+  {
+    "key": "2",
+    "title": "Annual Events",
+    "desc": "",
+    "list": [
+      {
+        "key": "00",
+        "title": "Stable Summit",
+        "titleLink": "google.com",
+
+        "items": [
+          "Produced on behalf of Stake Capital Group & Curve Finance",
+          "Founders & Leaders from 15+ stablecoins, including Curve, AAVE, Maker, Circle and more.  "
+        ]
+      },
+      {
+        "key": "01",
+
+        "title": "Blockchain Oracle Summit",
+        "titleLink": "google.com",
+
+        "items": [
+          "Founders & Leaders from 17+ oracle networks, including Tellor, Chronicle, Chainlink and more. "
+        ]
+      }
+    ]
+  },
+  {
+    "key": "3",
+    "title": "Past Events",
+    "desc": "",
+    "list": [
+      {
+        "key": "00",
+
+        "title": "RaveQuest: A New Merge",
+        "titleLink": "google.com",
+
+        "items": [
+          "The official afterparty of DEVCON VI in Bogota, produced on behalf of Quantstamp Inc. "
+        ]
+      },
+      {
+        "key": "01",
+
+        "title": "DeData",
+        "titleLink": "google.com",
+        "items": []
+      }
+    ]
+  }
+]
