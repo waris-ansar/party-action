@@ -1,0 +1,52 @@
+import React from "react";
+import { Blinker } from "next/font/google";
+const blinker = Blinker({ weight: ["400"], subsets: ["latin"] });
+import data from "./content.json";
+function About({ active, setActiveSection }) {
+  return (
+    <section
+      id="third"
+      className={`opacity-100 slide-in ${
+        (active === "about" || active === "contact") && "active"
+      }`}
+      // style={{ transform: "translate3d(100%, 0px, 0px)" }}
+    >
+      <div className="sec-header" onClick={() => setActiveSection("about")}>
+        <span className="absolute top-9 left-0 right-0 text-center text-white text-2xl font-satoshi font-medium">
+          03
+        </span>
+        <span className="absolute bottom-9 text-white text-2xl font-satoshi font-medium text-header-menu">
+          About
+        </span>
+      </div>
+
+      <div className="sec-body border-l text-white grid grid-cols-2 ">
+        <div className="flex justify-center items-center text-center align-middle">
+          <h1 className="text-[40px] font-satoshi">About</h1>
+        </div>
+        <div className="border-l h-[100vh] overflow-auto">
+          <div className="border-b text-2xl mt-[20%] pb-16 mx-12">
+            <p className={blinker.className}>
+              Party Action People is a Singaporean event agency. Since 2021, we
+              have focused fully on events in the blockchain/DeFi space. 
+            </p>
+          </div>
+          <div className="mt-20 mx-12 ">
+            {data?.map((item) => {
+              return (
+                <div key={item.key}>
+                  <h1 className="text-[40px] font-satoshi">{item?.name}</h1>
+                  <p className={`${blinker.className} text-2xl mt-6`}>
+                    {item?.para}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default About;

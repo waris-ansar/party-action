@@ -8,7 +8,7 @@ function Home({ active, setActiveSection }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, 2000); // Adjust the time (in milliseconds) for each word to stay on screen
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);

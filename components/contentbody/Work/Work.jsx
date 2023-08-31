@@ -46,7 +46,7 @@ function Work({ active, setActiveSection }) {
             future of finance. 
           </p>
         </div>
-        <div className="flex justify-center flex-col border-l overflow-auto">
+        <div className="flex justify-center flex-col border-l overflow-auto h-[100vh]">
           {data.map((item, index) => {
             return (
               <div key={item.key} className="cursor-pointer">
@@ -79,24 +79,24 @@ function Work({ active, setActiveSection }) {
                     } border-t px-10 py-8`}
                   >
                     {item.desc !== "" && (
-                      <p className="text-xl ">{item.desc}</p>
+                      <p className="text-2xl ">{item.desc}</p>
                     )}
                     {item?.list.map((list, index) => {
                       return list.length > 2 ? (
-                        <ul className="list-disc pl-6 pt-2 text-xl">
+                        <ul className="list-disc pl-6 pt-2 text-2xl">
                           <li key={index}>{list}</li>
                         </ul>
                       ) : (
                         <div key={list.key}>
                           <a href={list.titleLink}>
-                            <p className={`text-xl ${index > 0 && "mt-4"}`}>
+                            <p className={`text-2xl ${index > 0 && "mt-4"}`}>
                               {list.title}
                             </p>
                           </a>
                           {list.items.map((listItems) => {
                             return (
                               <ul
-                                className="list-disc pl-6 pt-2 text-xl"
+                                className="list-disc pl-6 pt-2 text-2xl"
                                 key={index}
                               >
                                 <li>{listItems}</li>
