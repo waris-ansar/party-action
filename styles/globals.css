@@ -9,7 +9,10 @@
 
 @font-face {
   font-family: "SatoshiM";
-  src: url("../public/assets/fonts/satoshi/Satoshi-Medium.ttf");
+  src: url("../public/assets/fonts/satoshi/Satoshi-Medium.woff2")
+      format("woff2"),
+    url("../public/assets/fonts/satoshi/Satoshi-Medium.woff") format("woff");
+
   font-weight: 500;
   font-style: normal;
 }

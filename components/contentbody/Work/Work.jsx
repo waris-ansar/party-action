@@ -5,11 +5,14 @@ import data from "./content.json";
 const blinker = Blinker({ weight: ["400"], subsets: ["latin"] });
 
 function Work({ active, setActiveSection }) {
-  const [openItem, setOpenItem] = useState(false);
-  const toggleContent = () => {
-    setOpenItem(!openItem);
+  const [openItem, setOpenItem] = useState(null);
+  const toggleContent = (index) => {
+    if (openItem === index) {
+      setOpenItem(null);
+    } else {
+      setOpenItem(index);
+    }
   };
-  let Icon = openItem ? "/assets/images/close.svg" : "/assets/images/open.svg";
   return (
     <section
       id="first"
@@ -32,53 +35,77 @@ function Work({ active, setActiveSection }) {
       </div>
 
       <div className="sec-body border-l  text-white grid grid-cols-2 ">
-        <div>
-          <h2>
+        <div className="flex flex-col justify-center  px-4">
+          <h2 className="text-6xl font-satoshi">
             Our events don’t just feature leaders in DeFi, they’re built for
             them.
           </h2>
-          <p>
+          <p className={`${blinker.className} mt-10 text-2xl`}>
             We create spaces for founders, CTOs, developers, students and
             enthusiasts to collaborate and innovate in niche aspects of the
             future of finance. 
           </p>
         </div>
-        <div>
-          {data.map((item) => {
+        <div className="flex justify-center flex-col border-l overflow-auto">
+          {data.map((item, index) => {
             return (
-              <div className="border-l" key={item.key}>
+              <div key={item.key} className="cursor-pointer">
                 <div
-                  className="border-t px-10 flex justify-between"
-                  onClick={toggleContent}
+                  className={`border-t px-10 flex justify-between py-10 ${
+                    index === 2 && "border-b"
+                  }`}
+                  onClick={() => {
+                    toggleContent(index);
+                  }}
                 >
-                  <h3 className="text-4xl font-satoshi">{item.title}</h3>
-                  <Image src={Icon} width={24} height={24} alt="open-close" />
+                  <h3 className="text-4xl font-satoshi pointer">
+                    {item.title}
+                  </h3>
+                  <Image
+                    src={
+                      openItem === index
+                        ? "/assets/images/close.svg"
+                        : "/assets/images/open.svg"
+                    }
+                    width={24}
+                    height={24}
+                    alt="open-close"
+                  />
                 </div>
                 <div className={blinker.className}>
                   <div
                     className={`${
-                      openItem ? "block" : "hidden"
-                    } border-t px-10 pt-8`}
+                      openItem === index ? "block" : "hidden"
+                    } border-t px-10 py-8`}
                   >
                     {item.desc !== "" && (
                       <p className="text-xl ">{item.desc}</p>
                     )}
-                    <ul className="list-disc pl-6 pt-2 text-xl">
-                      {item?.list.map((list, index) => {
-                        return list.length > 2 ? (
+                    {item?.list.map((list, index) => {
+                      return list.length > 2 ? (
+                        <ul className="list-disc pl-6 pt-2 text-xl">
                           <li key={index}>{list}</li>
-                        ) : (
-                          <div key={list.key}>
-                            <a href={list.titleLink}>
-                              <p className="text-xl ">{list.title}</p>
-                            </a>
-                            {list.items.map((listItems) => {
-                              return <li key={index}>{listItems}</li>;
-                            })}
-                          </div>
-                        );
-                      })}
-                    </ul>
+                        </ul>
+                      ) : (
+                        <div key={list.key}>
+                          <a href={list.titleLink}>
+                            <p className={`text-xl ${index > 0 && "mt-4"}`}>
+                              {list.title}
+                            </p>
+                          </a>
+                          {list.items.map((listItems) => {
+                            return (
+                              <ul
+                                className="list-disc pl-6 pt-2 text-xl"
+                                key={index}
+                              >
+                                <li>{listItems}</li>
+                              </ul>
+                            );
+                          })}
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
