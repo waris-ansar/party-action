@@ -18,10 +18,10 @@ function Contact({ active, setActiveSection }) {
         </span>
       </div>
 
-      <div className="sec-body border-l  text-white grid grid-cols-2">
+      <div className="sec-body border-l  text-white grid grid-cols-2 w-full">
         <div className={` ${active === "contact" && "active"}`}>
           <div
-            className={`flex text-2xl justify-between align-middle items-center h-full border-r ${blinker.className}`}
+            className={`flex text-2xl justify-center align-middle items-center h-full border-r ${blinker.className}`}
           >
             <a href="mailto:info@partyactionpeople.com">
               <h4>EMAIL</h4>

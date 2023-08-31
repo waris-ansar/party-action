@@ -1,0 +1,31 @@
+[
+  {
+    "key": 1,
+    "title": "2023: Devconnect Istanbul",
+    "list": [
+      "unStable Summit",
+      "La Degen & More with Stake Capital Group",
+      "Meet the Oracles",
+      "Farmers Market Istanbul"
+    ]
+  },
+  {
+    "key": 2,
+    "title": "Feb/March 2024: ETH Denver",
+    "list": ["unStable Summit", "Meet the Oracles"]
+  },
+  {
+    "key": 3,
+    "title": "July 2024: EthCC Brussels",
+    "list": [
+      "Stable Summit",
+      "BOS24",
+      "La Degen & More with Stake Capital Group"
+    ]
+  },
+  {
+    "key": 4,
+    "title": "Nov 2024: DEVCON VII: Southeast Asia",
+    "list": ["unStable Summit", "Meet the Oracles"]
+  }
+]

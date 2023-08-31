@@ -1,7 +1,7 @@
 import React from "react";
 import Home from "./contentbody/Home";
 import Work from "./contentbody/Work/Work";
-import Schedule from "./contentbody/Schedule";
+import Schedule from "./contentbody/Schedule/Schedule";
 import About from "./contentbody/About/About";
 import Contact from "./contentbody/Contact";
 
