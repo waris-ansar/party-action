@@ -102,7 +102,7 @@ section {
   background: #000;
   border-left: 1px solid #ffffff;
 }
-@media screen and (max-width: 1105px) {
+@media screen and (max-width: 1110px) {
   .sec-header {
     display: none !important;
   }
