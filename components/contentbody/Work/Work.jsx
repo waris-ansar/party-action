@@ -34,7 +34,7 @@ function Work({ active, setActiveSection }) {
         </span>
       </div>
 
-      <div className="sec-body border-l  text-white grid grid-cols-2 ">
+      <div className="sec-body border-l  text-white md:grid md:grid-cols-2 ">
         <div className="flex flex-col justify-center  px-4 ">
           <h2 className="text-6xl font-satoshi">
             Our events don’t just feature leaders in DeFi, they’re built for
@@ -47,7 +47,7 @@ function Work({ active, setActiveSection }) {
           </p>
         </div>
         <div className=" border-l overflow-auto h-[100vh] ">
-          <div className="flex  flex-col relative top-[35%]">
+          <div className="flex  flex-col relative top-[40%]">
             {data.map((item, index) => {
               return (
                 <div key={item.key} className="cursor-pointer ">
