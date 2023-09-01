@@ -78,9 +78,15 @@ function Home({ active, setActiveSection }) {
             <p className="font-satoshi text-base text-white font-normal text-right pt-1">
               Seletar, Singapore
             </p>
-            <p className="font-satoshi text-base text-white font-normal text-right pt-1">
-              t.me/partyactionpeople
-            </p>
+            <a
+              href="https://t.me/partyactionpeople"
+              target="_blank"
+              className="cursor-pointer"
+            >
+              <p className="font-satoshi text-base text-white font-normal text-right pt-1">
+                t.me/partyactionpeople
+              </p>
+            </a>
           </div>
         </div>
       </div>

@@ -35,7 +35,7 @@ function Work({ active, setActiveSection }) {
       </div>
 
       <div className="sec-body border-l  text-white grid grid-cols-2 ">
-        <div className="flex flex-col justify-center  px-4">
+        <div className="flex flex-col justify-center  px-4 ">
           <h2 className="text-6xl font-satoshi">
             Our events don’t just feature leaders in DeFi, they’re built for
             them.
@@ -46,71 +46,73 @@ function Work({ active, setActiveSection }) {
             future of finance. 
           </p>
         </div>
-        <div className="flex justify-center flex-col border-l overflow-auto h-[100vh]">
-          {data.map((item, index) => {
-            return (
-              <div key={item.key} className="cursor-pointer">
-                <div
-                  className={`border-t px-10 flex justify-between py-10 ${
-                    index === 2 && "border-b"
-                  }`}
-                  onClick={() => {
-                    toggleContent(index);
-                  }}
-                >
-                  <h3 className="text-4xl font-satoshi pointer">
-                    {item.title}
-                  </h3>
-                  <Image
-                    src={
-                      openItem === index
-                        ? "/assets/images/close.svg"
-                        : "/assets/images/open.svg"
-                    }
-                    width={24}
-                    height={24}
-                    alt="open-close"
-                  />
-                </div>
-                <div className={blinker.className}>
+        <div className=" border-l overflow-auto h-[100vh] ">
+          <div className="flex  flex-col relative top-[35%]">
+            {data.map((item, index) => {
+              return (
+                <div key={item.key} className="cursor-pointer ">
                   <div
-                    className={`${
-                      openItem === index ? "block" : "hidden"
-                    } border-t px-10 py-8`}
+                    className={`border-t px-10 flex justify-between py-10 ${
+                      index === 2 && "border-b"
+                    } `}
+                    onClick={() => {
+                      toggleContent(index);
+                    }}
                   >
-                    {item.desc !== "" && (
-                      <p className="text-2xl ">{item.desc}</p>
-                    )}
-                    {item?.list.map((list, index) => {
-                      return list.length > 2 ? (
-                        <ul className="list-disc pl-6 pt-2 text-2xl">
-                          <li key={index}>{list}</li>
-                        </ul>
-                      ) : (
-                        <div key={list.key}>
-                          <a href={list.titleLink}>
-                            <p className={`text-2xl ${index > 0 && "mt-4"}`}>
-                              {list.title}
-                            </p>
-                          </a>
-                          {list.items.map((listItems) => {
-                            return (
-                              <ul
-                                className="list-disc pl-6 pt-2 text-2xl"
-                                key={index}
-                              >
-                                <li>{listItems}</li>
-                              </ul>
-                            );
-                          })}
-                        </div>
-                      );
-                    })}
+                    <h3 className="text-4xl font-satoshi pointer">
+                      {item.title}
+                    </h3>
+                    <Image
+                      src={
+                        openItem === index
+                          ? "/assets/images/close.svg"
+                          : "/assets/images/open.svg"
+                      }
+                      width={24}
+                      height={24}
+                      alt="open-close"
+                    />
+                  </div>
+                  <div className={blinker.className}>
+                    <div
+                      className={`${
+                        openItem === index ? "block" : "hidden"
+                      } border-t px-10 py-8`}
+                    >
+                      {item.desc !== "" && (
+                        <p className="text-2xl ">{item.desc}</p>
+                      )}
+                      {item?.list.map((list, index) => {
+                        return list.length > 2 ? (
+                          <ul className="list-disc pl-6 pt-2 text-2xl">
+                            <li key={index}>{list}</li>
+                          </ul>
+                        ) : (
+                          <div key={list.key}>
+                            <a href={list.titleLink}>
+                              <p className={`text-2xl ${index > 0 && "mt-4"}`}>
+                                {list.title}
+                              </p>
+                            </a>
+                            {list.items.map((listItems) => {
+                              return (
+                                <ul
+                                  className="list-disc pl-6 pt-2 text-2xl"
+                                  key={index}
+                                >
+                                  <li>{listItems}</li>
+                                </ul>
+                              );
+                            })}
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
