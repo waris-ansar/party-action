@@ -19,9 +19,13 @@ function Home({ active, setActiveSection }) {
         active === "home" && "active"
       }`}
     >
-      <div className="w-full flex  justify-between flex-col">
-        <div className="top flex flex-col justify-center flex-1 min-h-[350px] px-6">
-          <h3 className="font-satoshi sm:text-[3.2rem] text-[2.5rem] text-white font-medium w-fit">
+      <div
+        className={`w-full flex  justify-between flex-col ${
+          active === "home" && "active"
+        }`}
+      >
+        <div className="top flex flex-col justify-center flex-1 min-h-[350px] md:px-6">
+          <h3 className="font-satoshi sm:text-[3.2rem] text-[2.5rem] md:leading-normal leading-tight  text-white font-medium w-fit">
             Technical conferences at the heart of
             <span className="animation-container ml-[10px]">
               {words.map((word, index) => (
@@ -67,9 +71,7 @@ function Home({ active, setActiveSection }) {
             </div>
           </div>
         </div>
-        <div className="md:block hidden">
-          <Footer />
-        </div>
+        <Footer />
       </div>
     </section>
   );

@@ -34,7 +34,11 @@ function Work({ active, setActiveSection }) {
         </span>
       </div>
 
-      <div className="sec-body md:border-l  text-white md:grid md:grid-cols-2 md:mt-0 mt-20">
+      <div
+        className={`sec-body md:border-l  text-white md:grid md:grid-cols-2 md:mt-0 mt-20  ${
+          active === "work" && "active"
+        }`}
+      >
         <div className="flex flex-col justify-center  px-4 ">
           <h2 className="md:text-6xl sm:text-[3.2rem] text-[2.5rem] font-satoshi">
             Our events don’t just feature leaders in DeFi, they’re built for

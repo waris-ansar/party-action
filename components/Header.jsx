@@ -35,7 +35,7 @@ function Header({ active, setActiveSection }) {
           <div
             className="  w-5 "
             onClick={() => {
-              setToogle(true);
+              setToogle(!toogle);
             }}
           >
             <Image
@@ -51,9 +51,15 @@ function Header({ active, setActiveSection }) {
       <div
         className={`${
           toogle ? "block" : "hidden"
-        } bg-black text-white h-[100vh] hidden  font-satoshi`}
+        } bg-black text-white h-[100vh]   font-satoshi`}
       >
-        <div className="flex flex-row text-[5vw] py-6 px-6 border-b">
+        <div
+          className="flex flex-row text-[5vw] py-6 px-6 border-b"
+          onClick={() => {
+            setActiveSection("home");
+            setToogle(false);
+          }}
+        >
           <h1 className="mr-12">001</h1>
           <h1>Home</h1>
         </div>
@@ -63,11 +69,14 @@ function Header({ active, setActiveSection }) {
         </div>
         <div className="flex flex-row text-[5vw] py-6 px-6 border-b">
           <h1 className="mr-12">003</h1>
-          <h1>Schedule</h1>
+          <h1>About</h1>
         </div>
         <div className="flex flex-row text-[5vw] py-6 px-6 border-b">
-          <h1 className="mr-12">004</h1>
-          <h1>About</h1>
+          <h1 className="mr-12">004</h1> <h1>Schedule</h1>
+        </div>
+        <div className="flex flex-row text-[5vw] py-6 px-6 border-b">
+          <h1 className="mr-12">005</h1>
+          <h1>Contact</h1>
         </div>
       </div>
     </div>
