@@ -25,8 +25,8 @@ function About({ active, setActiveSection }) {
           <h1 className="text-[40px]  font-satoshi">About</h1>
         </div>
         <div className="md:border-l md:h-[100vh] overflow-auto">
-          <div className="border-b text-2xl md:mt-[20%] mt-8 pb-16 md:mx-12 mx-4">
-            <p className={blinker.className}>
+          <div className="border-b text-2xl md:mt-[20%] mt-8 pb-16 ">
+            <p className={`${blinker.className} md:mx-12 mx-4`}>
               Party Action People is a Singaporean event agency. Since 2021, we
               have focused fully on events in the blockchain/DeFi space. 
             </p>
@@ -35,7 +35,11 @@ function About({ active, setActiveSection }) {
             {data?.map((item) => {
               return (
                 <div key={item.key}>
-                  <h1 className="text-[40px] font-satoshi">{item?.name}</h1>
+                  <a href={item?.link} target="_blank">
+                    <h1 className="text-[40px] font-satoshi mt-12 cursor-pointer">
+                      {item?.name}
+                    </h1>
+                  </a>
                   <p className={`${blinker.className} text-2xl mt-6`}>
                     {item?.para}
                   </p>

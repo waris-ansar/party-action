@@ -3,7 +3,7 @@ import Image from "next/image";
 import Footer from "./Footer";
 
 function Home({ active, setActiveSection }) {
-  const words = ["DeFi", "Blockchain", "oracles", "stablecoins"];
+  const words = ["DeFi.", "blockchain", "oracles", "stablecoins"];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {

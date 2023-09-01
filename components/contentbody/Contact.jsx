@@ -23,20 +23,15 @@ function Contact({ active, setActiveSection }) {
         <div
           className={`flex text-2xl justify-center align-middle items-center h-full border-r ${blinker.className}`}
         >
-          <a href="mailto:info@partyactionpeople.com">
+          <a href="mailto:contact@partyactionpeople.com">
             <h4>EMAIL</h4>
           </a>
           <h4>/X/</h4>
           <a href="https://t.me/partyactionpeople" target="_blank">
             <h4>TELEGRAM</h4>
           </a>
-          <h4>/X/</h4>
           <a href="https://wa.me/6588759135" target="_blank">
             <h4>WHATSAPP</h4>
-          </a>
-          <h4>/X/</h4>
-          <a href="https://twitter.com/partyactionppl" target="_blank">
-            <h4>TWITTER</h4>
           </a>
         </div>
         <div className="md:block hidden">
