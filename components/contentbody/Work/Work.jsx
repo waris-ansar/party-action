@@ -34,9 +34,9 @@ function Work({ active, setActiveSection }) {
         </span>
       </div>
 
-      <div className="sec-body border-l  text-white md:grid md:grid-cols-2 ">
+      <div className="sec-body md:border-l  text-white md:grid md:grid-cols-2 md:mt-0 mt-20">
         <div className="flex flex-col justify-center  px-4 ">
-          <h2 className="text-6xl font-satoshi">
+          <h2 className="md:text-6xl sm:text-[3.2rem] text-[2.5rem] font-satoshi">
             Our events don’t just feature leaders in DeFi, they’re built for
             them.
           </h2>
@@ -46,8 +46,8 @@ function Work({ active, setActiveSection }) {
             future of finance. 
           </p>
         </div>
-        <div className=" border-l overflow-auto h-[100vh] ">
-          <div className="flex  flex-col relative top-[40%]">
+        <div className=" md:border-l overflow-auto md:h-[100vh] ">
+          <div className="flex  flex-col relative md:top-[40%] md:mt-0 mt-20">
             {data.map((item, index) => {
               return (
                 <div key={item.key} className="cursor-pointer ">

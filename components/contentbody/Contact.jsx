@@ -1,6 +1,7 @@
 import React from "react";
 import { Blinker } from "next/font/google";
 const blinker = Blinker({ weight: ["400"], subsets: ["latin"] });
+import { Widget } from "@typeform/embed-react";
 
 function Contact({ active, setActiveSection }) {
   return (
@@ -18,28 +19,39 @@ function Contact({ active, setActiveSection }) {
         </span>
       </div>
 
-      <div className="sec-body border-l  text-white grid grid-cols-2 w-full">
-        <div className={` ${active === "contact" && "active"}`}>
-          <div
-            className={`flex text-2xl justify-center align-middle items-center h-full border-r ${blinker.className}`}
-          >
-            <a href="mailto:info@partyactionpeople.com">
-              <h4>EMAIL</h4>
-            </a>
-            <h4>/X/</h4>
-            <a href="https://t.me/partyactionpeople" target="_blank">
-              <h4>TELEGRAM</h4>
-            </a>
-            <h4>/X/</h4>
-            <a href="https://wa.me/6588759135" target="_blank">
-              <h4>WHATSAPP</h4>
-            </a>
-            <h4>/X/</h4>
-            <a href="https://twitter.com/partyactionppl" target="_blank">
-              <h4>TWITTER</h4>
-            </a>
-          </div>
-          <div className=""></div>
+      <div className="sec-body border-l  text-white md:grid grid-cols-2 w-full md:mt-0 mt-20">
+        <div
+          className={`flex text-2xl justify-center align-middle items-center h-full border-r ${blinker.className}`}
+        >
+          <a href="mailto:info@partyactionpeople.com">
+            <h4>EMAIL</h4>
+          </a>
+          <h4>/X/</h4>
+          <a href="https://t.me/partyactionpeople" target="_blank">
+            <h4>TELEGRAM</h4>
+          </a>
+          <h4>/X/</h4>
+          <a href="https://wa.me/6588759135" target="_blank">
+            <h4>WHATSAPP</h4>
+          </a>
+          <h4>/X/</h4>
+          <a href="https://twitter.com/partyactionppl" target="_blank">
+            <h4>TWITTER</h4>
+          </a>
+        </div>
+        <div className="md:block hidden">
+          <Widget
+            id="https://partyactionpeople.typeform.com/papintro"
+            style={{ width: "100%", height: "100%" }}
+            className="my-form"
+          />
+        </div>
+        <div className="md:hidden block mt-10 h-[60rem] mb-10">
+          <Widget
+            id="https://partyactionpeople.typeform.com/papintro"
+            style={{ width: "100%", height: "100%" }}
+            className="my-form"
+          />
         </div>
       </div>
     </section>

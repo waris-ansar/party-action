@@ -11,7 +11,6 @@ function Schedule({ active, setActiveSection }) {
         (active === "schedule" || active === "about" || active === "contact") &&
         "active secdule"
       }`}
-      // style={{ transform: "translate3d(100%, 0px, 0px)" }}
     >
       <div className="sec-header" onClick={() => setActiveSection("schedule")}>
         <span className="absolute top-9 left-0 right-0 text-center text-white text-2xl font-satoshi font-medium">
@@ -22,9 +21,11 @@ function Schedule({ active, setActiveSection }) {
         </span>
       </div>
 
-      <div className="sec-body border-l grid grid-cols-2 text-white w-full">
+      <div className="sec-body md:border-l md:grid md:grid-cols-2 text-white w-full md:mt-0 mt-20">
         <div className="flex justify-center items-center text-center align-middle">
-          <h1 className="text-[40px] font-satoshi">Schedule</h1>
+          <h1 className="md:text-[40px] sm:text-[3.2rem] text-[2.5rem]  font-satoshi">
+            Schedule
+          </h1>
         </div>
         <div className="border-l flex flex-col justify-center">
           {data?.map((item) => {

@@ -20,18 +20,18 @@ function About({ active, setActiveSection }) {
         </span>
       </div>
 
-      <div className="sec-body border-l text-white grid grid-cols-2 ">
-        <div className="flex justify-center items-center text-center align-middle">
-          <h1 className="text-[40px] font-satoshi">About</h1>
+      <div className="sec-body md:border-l text-white md:grid md:grid-cols-2 md:mt-0 mt-20">
+        <div className="md:flex justify-center items-center md:text-center align-middle">
+          <h1 className="text-[40px]  font-satoshi">About</h1>
         </div>
-        <div className="border-l h-[100vh] overflow-auto">
-          <div className="border-b text-2xl mt-[20%] pb-16 mx-12">
+        <div className="md:border-l md:h-[100vh] overflow-auto">
+          <div className="border-b text-2xl md:mt-[20%] mt-8 pb-16 md:mx-12 mx-4">
             <p className={blinker.className}>
               Party Action People is a Singaporean event agency. Since 2021, we
               have focused fully on events in the blockchain/DeFi space. 
             </p>
           </div>
-          <div className="mt-20 mx-12 ">
+          <div className="mt-20 md:mx-12 mx-4">
             {data?.map((item) => {
               return (
                 <div key={item.key}>

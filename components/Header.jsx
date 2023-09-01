@@ -1,14 +1,76 @@
-import React from 'react';
-import Image from 'next/image';
+import React, { useState } from "react";
+import Image from "next/image";
 
-function Header({active, setActiveSection}) {
+function Header({ active, setActiveSection }) {
+  const [toogle, setToogle] = useState(false);
   return (
-    <header className='main-header items-center justify-between border-r border-white h-full w-[81px] relative z-[1] pt-6'>
-      <div className="logo h-9 w-9 m-auto">
-        <Image src={"/assets/images/logo.svg"} height={0} width={0} alt='logo' style={{width: "100%"}} />
+    <div>
+      <header className="md:block hidden main-header items-center justify-between border-r border-white h-full w-[81px] relative z-[1] pt-6">
+        <div className="logo h-9 w-9 m-auto">
+          <Image
+            src={"/assets/images/logo.svg"}
+            height={0}
+            width={0}
+            alt="logo"
+            style={{ width: "100%" }}
+          />
+        </div>
+        <button
+          className="home-Promt absolute top-0 left-0 w-20 h-full cursor-pointer"
+          onClick={() => setActiveSection("home")}
+        ></button>
+      </header>
+      <div className="  md:hidden flex justify-between py-6 px-6 bg-black border-b">
+        <div className=" h-9 w-9 ">
+          <Image
+            src={"/assets/images/logo.svg"}
+            height={0}
+            width={0}
+            alt="logo"
+            style={{ width: "100%" }}
+          />
+        </div>
+        <div className="flex justify-between items-center ">
+          <h4 className="text-white mr-5">Menu</h4>
+          <div
+            className="  w-5 "
+            onClick={() => {
+              setToogle(true);
+            }}
+          >
+            <Image
+              src={"/assets/images/menu.svg"}
+              height={0}
+              width={0}
+              alt="logo"
+              style={{ width: "100%" }}
+            />
+          </div>
+        </div>
       </div>
-      <button className='home-Promt absolute top-0 left-0 w-20 h-full cursor-pointer' onClick={() => setActiveSection('home')}></button>
-    </header>
-  )
+      <div
+        className={`${
+          toogle ? "block" : "hidden"
+        } bg-black text-white h-[100vh] hidden  font-satoshi`}
+      >
+        <div className="flex flex-row text-[5vw] py-6 px-6 border-b">
+          <h1 className="mr-12">001</h1>
+          <h1>Home</h1>
+        </div>
+        <div className="flex flex-row text-[5vw] py-6 px-6 border-b">
+          <h1 className="mr-12">002</h1>
+          <h1>Work</h1>
+        </div>
+        <div className="flex flex-row text-[5vw] py-6 px-6 border-b">
+          <h1 className="mr-12">003</h1>
+          <h1>Schedule</h1>
+        </div>
+        <div className="flex flex-row text-[5vw] py-6 px-6 border-b">
+          <h1 className="mr-12">004</h1>
+          <h1>About</h1>
+        </div>
+      </div>
+    </div>
+  );
 }
-export default Header
+export default Header;
