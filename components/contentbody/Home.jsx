@@ -18,7 +18,7 @@ function Home({ active, setActiveSection }) {
         active === "home" && "active"
       }`}
     >
-      <div className="w-full items-center justify-between flex-col">
+      <div className="w-full flex  justify-between flex-col">
         <div className="top flex flex-col justify-center flex-1 min-h-[350px] px-6">
           <h3 className="font-satoshi text-[3.2rem] text-white font-medium w-fit">
             Technical conferences at the heart of
