@@ -24,11 +24,11 @@ function Home({ active, setActiveSection }) {
           active === "home" && "active"
         }`}
       >
-        <div className="top flex flex-col justify-center flex-1 min-h-[350px] px-6">
-          <h3 className="font-satoshi sm:text-[3.2rem] text-[2.2rem] md:leading-normal leading-tight  text-white font-medium w-fit mb-6 extrasm:mb-0">
+        <div className="top flex flex-col justify-center flex-1 md:min-h-[350px] min-h-screen px-6">
+          <h3 className="font-satoshi sm:text-[3.2rem] extrasm:text-[2.2rem] text-[2rem] md:leading-normal leading-tight  text-white font-medium w-fit mb-6 extrasm:mb-0">
             Technical conferences at the heart of
-            <br className="block sm410:hidden" />
-            <span className="animation-container ml-0 sm410:ml-[10px]">
+            <br className="block extrasm:hidden" />
+            <span className="animation-container extrasm:ml-3">
               {words.map((word, index) => (
                 <span
                   key={index}
@@ -42,7 +42,7 @@ function Home({ active, setActiveSection }) {
             </span>
           </h3>
 
-          <div className="flex flex-row mt-11 items-center">
+          <div className="flex flex-row  mt-11 items-center">
             <div className="w-36 ">
               <Image
                 src={"/assets/images/stable.svg"}
