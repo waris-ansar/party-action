@@ -27,7 +27,7 @@ function Schedule({ active, setActiveSection }) {
             Schedule
           </h1>
         </div>
-        <div className="border-l flex flex-col justify-center">
+        <div className="md:border-l flex flex-col justify-center">
           {data?.map((item) => {
             return (
               <div key={item.key} className={`${blinker.className}  text-2xl`}>

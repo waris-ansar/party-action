@@ -35,11 +35,9 @@ function About({ active, setActiveSection }) {
             {data?.map((item) => {
               return (
                 <div key={item.key}>
-                  <a href={item?.link} target="_blank">
-                    <h1 className="text-[40px] font-satoshi mt-12 cursor-pointer">
-                      {item?.name}
-                    </h1>
-                  </a>
+                  <h1 className="md:text-[40px] text-[2.5rem] font-satoshi mt-12 cursor-pointer">
+                    {item?.name}
+                  </h1>
                   <p className={`${blinker.className} text-2xl mt-6`}>
                     {item?.para}
                   </p>

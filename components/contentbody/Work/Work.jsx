@@ -39,8 +39,8 @@ function Work({ active, setActiveSection }) {
           active === "work" && "active"
         }`}
       >
-        <div className="flex flex-col justify-center  px-4 ">
-          <h2 className="md:text-6xl sm:text-[3.2rem] text-[2.5rem] font-satoshi">
+        <div className="flex flex-col justify-center  md:px-4 ">
+          <h2 className="md:text-6xl sm:text-[3.2rem] text-[2.5rem] md:leading-normal leading-tight  font-satoshi">
             Our events don’t just feature leaders in DeFi, they’re built for
             them.
           </h2>
@@ -56,7 +56,7 @@ function Work({ active, setActiveSection }) {
               return (
                 <div key={item.key} className="cursor-pointer ">
                   <div
-                    className={`border-t px-10 flex justify-between py-10 ${
+                    className={`border-t md:px-10 px-4 flex justify-between md:py-10 py-4 ${
                       index === 2 && "border-b"
                     } `}
                     onClick={() => {
