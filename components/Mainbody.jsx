@@ -10,7 +10,7 @@ function Mainbody({ active, setActiveSection, toogle }) {
 
   return (
     <div
-      className={`md:absolute top-0 left-20 bottom-0 right-0 md:mx-0 mx-6  md:overflow-hidden overflow-auto ${
+      className={`md:absolute top-0 left-20 bottom-0 right-0   md:overflow-hidden overflow-auto ${
         toogle && "hidden"
       }`}
     >

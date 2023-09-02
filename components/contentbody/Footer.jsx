@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="details flex items-center md:flex-nowrap flex-wrap border-t border-white h-40 justify-between md:px-6 px-0">
+    <div className="details flex items-center md:flex-nowrap flex-wrap border-t border-white h-40 justify-between px-6 ">
       <p className="font-satoshi text-base text-white font-normal">
         conferences / parties / side-events /<br></br> business development /
         marketing / pr

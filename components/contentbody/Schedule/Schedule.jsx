@@ -27,11 +27,11 @@ function Schedule({ active, setActiveSection }) {
             Schedule
           </h1>
         </div>
-        <div className="md:border-l flex flex-col justify-center md:mb-0 mb-20">
+        <div className="md:border-l flex flex-col justify-center md:mb-0 mb-20 md:mx-6 mx-4">
           {data?.map((item) => {
             return (
               <div key={item.key} className={`${blinker.className}  text-2xl`}>
-                <h4 className="mt-6">{item?.title}</h4>
+                <h4 className="mt-6 ">{item?.title}</h4>
                 <ul className="list-disc pl-6 pt-2 md:text-2xl text-xl">
                   {item?.list?.map((list, index) => {
                     return <li key={index}>{list}</li>;

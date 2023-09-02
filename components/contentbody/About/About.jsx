@@ -9,7 +9,6 @@ function About({ active, setActiveSection }) {
       className={`opacity-100 slide-in ${
         (active === "about" || active === "contact") && "active"
       } ${active !== "about" && "hidden md:block"}`}
-      // style={{ transform: "translate3d(100%, 0px, 0px)" }}
     >
       <div className="sec-header" onClick={() => setActiveSection("about")}>
         <span className="absolute top-9 left-0 right-0 text-center text-white text-2xl font-satoshi font-medium">
@@ -25,13 +24,13 @@ function About({ active, setActiveSection }) {
           <h1 className="text-[40px]  font-satoshi">About</h1>
         </div>
         <div className="md:border-l md:h-[100vh] overflow-auto">
-          <div className="border-b ms:text-2xl text-xl md:mt-[20%] mt-8 pb-16 ">
-            <p className={`${blinker.className} md:mx-12 `}>
+          <div className="border-b ms:text-2xl text-xl md:mt-[20%] mt-8 md:pb-16 pb-10">
+            <p className={`${blinker.className} md:mx-12 mx-4`}>
               Party Action People is a Singaporean event agency. Since 2021, we
               have focused fully on events in the blockchain/DeFi space. 
             </p>
           </div>
-          <div className="mt-20 md:mx-12 md:mb-0 mb-20">
+          <div className="md:mt-20 mt-10 md:mx-12 mx-4 md:mb-0 mb-20">
             {data?.map((item) => {
               return (
                 <div key={item.key}>

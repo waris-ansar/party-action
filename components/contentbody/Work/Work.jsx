@@ -22,7 +22,7 @@ function Work({ active, setActiveSection }) {
           active === "about" ||
           active === "contact") &&
         "active"
-      } ${active !=="work" && "hidden md:block"}`}
+      } ${active !== "work" && "hidden md:block"}`}
       //   style={{ transform: "translate3d(100%, 0px, 0px)" }}
     >
       <div className="sec-header" onClick={() => setActiveSection("work")}>
@@ -35,16 +35,18 @@ function Work({ active, setActiveSection }) {
       </div>
 
       <div
-        className={`sec-body md:border-l  text-white md:grid md:grid-cols-2 md:mt-0 mt-20  ${
+        className={`sec-body md:border-l  text-white md:grid md:grid-cols-2 md:mt-0 mt-20 min-h-screen  ${
           active === "work" && "active"
         }`}
       >
-        <div className="flex flex-col justify-center  md:px-4 ">
-          <h2 className="md:text-6xl sm:text-[3.2rem] text-[2.5rem] md:leading-normal leading-tight  font-satoshi">
+        <div className="flex flex-col justify-center  px-4 ">
+          <h2 className="md:text-6xl sm:text-[3.2rem] sm:text-[2.5rem] text-[2rem] md:leading-normal leading-tight  font-satoshi">
             Our events don’t just feature leaders in DeFi, they’re built for
             them.
           </h2>
-          <p className={`${blinker.className} mt-10 text-2xl`}>
+          <p
+            className={`${blinker.className} sm:mt-10 mt-4 md:text-2xl text-xl`}
+          >
             We create spaces for founders, CTOs, developers, students and
             enthusiasts to collaborate and innovate in niche aspects of the
             future of finance. 
@@ -63,7 +65,7 @@ function Work({ active, setActiveSection }) {
                       toggleContent(index);
                     }}
                   >
-                    <h3 className="text-4xl font-satoshi pointer">
+                    <h3 className="2xl:text-4xl md:text-3xl  text-2xl font-satoshi pointer">
                       {item.title}
                     </h3>
                     <Image
@@ -84,7 +86,7 @@ function Work({ active, setActiveSection }) {
                       } border-t px-10 py-8`}
                     >
                       {item.desc !== "" && (
-                        <p className="text-2xl ">{item.desc}</p>
+                        <p className="sm:text-2xl text-xl">{item.desc}</p>
                       )}
                       {item?.list.map((list, index) => {
                         return list.length > 2 ? (
