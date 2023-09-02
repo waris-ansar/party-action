@@ -63,7 +63,7 @@ function Home({ active, setActiveSection }) {
             </div>
             <div className="w-36  ml-6">
               <Image
-                src={"/assets/images/Boss.svg"}
+                src={"/assets/images/boss.svg"}
                 width={0}
                 height={0}
                 alt="logo"
