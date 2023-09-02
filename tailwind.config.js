@@ -18,6 +18,8 @@ module.exports = {
       },
     },
     screens: {
+      sm410: "442px",
+      extrasm: "500px",
       md: "1110px",
       "2xl": "1536px",
     },
