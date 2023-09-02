@@ -10,7 +10,7 @@ function Schedule({ active, setActiveSection }) {
       className={`opacity-100 slide-in ${
         (active === "schedule" || active === "about" || active === "contact") &&
         "active secdule"
-      } ${active !=="schedule" && "hidden md:block"}`}
+      } ${active !== "schedule" && "hidden md:block"}`}
     >
       <div className="sec-header" onClick={() => setActiveSection("schedule")}>
         <span className="absolute top-9 left-0 right-0 text-center text-white text-2xl font-satoshi font-medium">
@@ -27,12 +27,12 @@ function Schedule({ active, setActiveSection }) {
             Schedule
           </h1>
         </div>
-        <div className="md:border-l flex flex-col justify-center">
+        <div className="md:border-l flex flex-col justify-center md:mb-0 mb-20">
           {data?.map((item) => {
             return (
               <div key={item.key} className={`${blinker.className}  text-2xl`}>
                 <h4 className="mt-6">{item?.title}</h4>
-                <ul className="list-disc pl-6 pt-2 text-2xl">
+                <ul className="list-disc pl-6 pt-2 md:text-2xl text-xl">
                   {item?.list?.map((list, index) => {
                     return <li key={index}>{list}</li>;
                   })}
