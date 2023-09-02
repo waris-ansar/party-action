@@ -21,24 +21,26 @@ function About({ active, setActiveSection }) {
       </div>
 
       <div className="sec-body md:border-l text-white md:grid md:grid-cols-2 md:mt-0 mt-20">
-        <div className="md:flex justify-center items-center md:text-center align-middle">
+        <div className="md:flex justify-center items-center text-center align-middle">
           <h1 className="text-[40px]  font-satoshi">About</h1>
         </div>
         <div className="md:border-l md:h-[100vh] overflow-auto">
-          <div className="border-b text-2xl md:mt-[20%] mt-8 pb-16 ">
-            <p className={`${blinker.className} md:mx-12 mx-4`}>
+          <div className="border-b ms:text-2xl text-xl md:mt-[20%] mt-8 pb-16 ">
+            <p className={`${blinker.className} md:mx-12 `}>
               Party Action People is a Singaporean event agency. Since 2021, we
               have focused fully on events in the blockchain/DeFi space. 
             </p>
           </div>
-          <div className="mt-20 md:mx-12 mx-4">
+          <div className="mt-20 md:mx-12 md:mb-0 mb-20">
             {data?.map((item) => {
               return (
                 <div key={item.key}>
-                  <h1 className="md:text-[40px] text-[2.5rem] font-satoshi mt-12 cursor-pointer">
+                  <h1 className="md:text-[40px] sm:text-[2.5rem] text-[2rem] md:leading-normal leading-tight  font-satoshi mt-12 cursor-pointer">
                     {item?.name}
                   </h1>
-                  <p className={`${blinker.className} text-2xl mt-6`}>
+                  <p
+                    className={`${blinker.className} sm:text-2xl text-xl mt-6`}
+                  >
                     {item?.para}
                   </p>
                 </div>

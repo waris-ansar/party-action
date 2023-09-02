@@ -10,7 +10,6 @@ function Contact({ active, setActiveSection }) {
       className={`opacity-100 slide-in ${active === "contact" && "active"} ${
         active !== "contact" && "hidden md:block"
       }`}
-      // style={{ transform: "translate3d(100%, 0px, 0px)" }}
     >
       <div className="sec-header" onClick={() => setActiveSection("contact")}>
         <span className="absolute top-9 left-0 right-0 text-center text-white text-2xl font-satoshi font-medium">
@@ -21,9 +20,9 @@ function Contact({ active, setActiveSection }) {
         </span>
       </div>
 
-      <div className="sec-body border-l  text-white md:grid grid-cols-2 w-full md:mt-0 mt-20">
+      <div className="sec-body md:border-l  text-white md:grid grid-cols-2 w-full md:mt-0 mt-6">
         <div
-          className={`flex text-2xl justify-center align-middle items-center h-full border-r ${blinker.className}`}
+          className={`md:flex  hidden text-2xl justify-center align-middle items-center h-full  md:border-r ${blinker.className}`}
         >
           <a href="mailto:contact@partyactionpeople.com">
             <h4>EMAIL</h4>
@@ -43,7 +42,7 @@ function Contact({ active, setActiveSection }) {
             className="my-form"
           />
         </div>
-        <div className="md:hidden block mt-10 h-[60rem] mb-10">
+        <div className="md:hidden block mt-10 h-[80vh] mb-10">
           <Widget
             id="https://partyactionpeople.typeform.com/papintro"
             style={{ width: "100%", height: "100%" }}
