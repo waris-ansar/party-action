@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
+import { Blinker } from "next/font/google";
+const blinker = Blinker({ weight: ["400"], subsets: ["latin"] });
 import Image from "next/image";
 
 function Header({ active, setActiveSection, toogle, setToogle }) {
@@ -20,7 +22,13 @@ function Header({ active, setActiveSection, toogle, setToogle }) {
         ></button>
       </header>
       <div className="  md:hidden flex justify-between py-6 px-6 bg-black border-b">
-        <div className=" h-9 w-9 ">
+        <div
+          className=" h-9 w-9 "
+          onClick={() => {
+            setActiveSection("home");
+            setToogle(false);
+          }}
+        >
           <Image
             src={"/assets/images/logo.svg"}
             height={0}
@@ -100,6 +108,20 @@ function Header({ active, setActiveSection, toogle, setToogle }) {
         >
           <h1 className="mr-12">005</h1>
           <h1>Contact</h1>
+        </div>
+        <div
+          className={`flex text-xl justify-center align-middle items-center  text-white mt-20 ${blinker.className}`}
+        >
+          <a href="mailto:contact@partyactionpeople.com">
+            <h4>EMAIL</h4>
+          </a>
+          <h4>/X/</h4>
+          <a href="https://t.me/partyactionpeople" target="_blank">
+            <h4>TELEGRAM/</h4>
+          </a>
+          <a href="https://wa.me/6588759135" target="_blank">
+            <h4>WHATSAPP</h4>
+          </a>
         </div>
       </div>
     </div>

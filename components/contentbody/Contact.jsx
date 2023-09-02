@@ -29,7 +29,7 @@ function Contact({ active, setActiveSection }) {
           </a>
           <h4>/X/</h4>
           <a href="https://t.me/partyactionpeople" target="_blank">
-            <h4>TELEGRAM</h4>
+            <h4>TELEGRAM/</h4>
           </a>
           <a href="https://wa.me/6588759135" target="_blank">
             <h4>WHATSAPP</h4>
