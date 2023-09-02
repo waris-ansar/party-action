@@ -90,20 +90,24 @@ function Work({ active, setActiveSection }) {
                       )}
                       {item?.list.map((list, index) => {
                         return list.length > 2 ? (
-                          <ul className="list-disc pl-6 pt-2 text-2xl">
+                          <ul className="list-disc pl-6 pt-2 md:text-2xl text-xl">
                             <li key={index}>{list}</li>
                           </ul>
                         ) : (
                           <div key={list.key}>
                             <a href={list.titleLink}>
-                              <p className={`text-2xl ${index > 0 && "mt-4"}`}>
+                              <p
+                                className={`md:text-2xl text-xl ${
+                                  index > 0 && "mt-4"
+                                }`}
+                              >
                                 {list.title}
                               </p>
                             </a>
                             {list.items.map((listItems) => {
                               return (
                                 <ul
-                                  className="list-disc pl-6 pt-2 text-2xl"
+                                  className="list-disc pl-6 pt-2 md:text-2xl text-xl"
                                   key={index}
                                 >
                                   <li>{listItems}</li>
