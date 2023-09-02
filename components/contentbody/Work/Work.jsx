@@ -22,7 +22,7 @@ function Work({ active, setActiveSection }) {
           active === "about" ||
           active === "contact") &&
         "active"
-      }`}
+      } ${active !=="work" && "hidden md:block"}`}
       //   style={{ transform: "translate3d(100%, 0px, 0px)" }}
     >
       <div className="sec-header" onClick={() => setActiveSection("work")}>

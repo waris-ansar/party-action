@@ -7,7 +7,9 @@ function Contact({ active, setActiveSection }) {
   return (
     <section
       id="fourth"
-      className={`opacity-100 slide-in ${active === "contact" && "active"}`}
+      className={`opacity-100 slide-in ${active === "contact" && "active"} ${
+        active !== "contact" && "hidden md:block"
+      }`}
       // style={{ transform: "translate3d(100%, 0px, 0px)" }}
     >
       <div className="sec-header" onClick={() => setActiveSection("contact")}>

@@ -5,10 +5,16 @@ import Schedule from "./contentbody/Schedule/Schedule";
 import About from "./contentbody/About/About";
 import Contact from "./contentbody/Contact";
 
-function Mainbody({ active, setActiveSection }) {
+function Mainbody({ active, setActiveSection, toogle }) {
+  console.log(active, "this is the active section name ");
+
   return (
-    <div className="md:absolute top-0 left-20 bottom-0 right-0 md:mx-0 mx-6  md:overflow-hidden overflow-auto">
-      <Home active={active} />
+    <div
+      className={`md:absolute top-0 left-20 bottom-0 right-0 md:mx-0 mx-6  md:overflow-hidden overflow-auto ${
+        toogle && "hidden"
+      }`}
+    >
+      <Home active={active} setActiveSection={setActiveSection} />
       <Work active={active} setActiveSection={setActiveSection} />
       <Schedule active={active} setActiveSection={setActiveSection} />
       <About active={active} setActiveSection={setActiveSection} />

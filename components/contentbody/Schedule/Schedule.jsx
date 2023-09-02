@@ -10,7 +10,7 @@ function Schedule({ active, setActiveSection }) {
       className={`opacity-100 slide-in ${
         (active === "schedule" || active === "about" || active === "contact") &&
         "active secdule"
-      }`}
+      } ${active !=="schedule" && "hidden md:block"}`}
     >
       <div className="sec-header" onClick={() => setActiveSection("schedule")}>
         <span className="absolute top-9 left-0 right-0 text-center text-white text-2xl font-satoshi font-medium">

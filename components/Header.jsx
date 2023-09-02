@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-function Header({ active, setActiveSection }) {
-  const [toogle, setToogle] = useState(false);
+function Header({ active, setActiveSection, toogle, setToogle }) {
   return (
     <div>
       <header className="md:block hidden main-header items-center justify-between border-r border-white h-full w-[81px] relative z-[1] pt-6">
@@ -51,7 +50,7 @@ function Header({ active, setActiveSection }) {
       <div
         className={`${
           toogle ? "block" : "hidden"
-        } bg-black text-white h-[100vh]   font-satoshi`}
+        } bg-black text-white h-[100vh] font-satoshi`}
       >
         <div
           className="flex flex-row text-[5vw] py-6 px-6 border-b"
@@ -63,18 +62,42 @@ function Header({ active, setActiveSection }) {
           <h1 className="mr-12">001</h1>
           <h1>Home</h1>
         </div>
-        <div className="flex flex-row text-[5vw] py-6 px-6 border-b">
+        <div
+          className="flex flex-row text-[5vw] py-6 px-6 border-b"
+          onClick={() => {
+            setActiveSection("work");
+            setToogle(false);
+          }}
+        >
           <h1 className="mr-12">002</h1>
           <h1>Work</h1>
         </div>
-        <div className="flex flex-row text-[5vw] py-6 px-6 border-b">
+        <div
+          className="flex flex-row text-[5vw] py-6 px-6 border-b"
+          onClick={() => {
+            setActiveSection("about");
+            setToogle(false);
+          }}
+        >
           <h1 className="mr-12">003</h1>
           <h1>About</h1>
         </div>
-        <div className="flex flex-row text-[5vw] py-6 px-6 border-b">
+        <div
+          className="flex flex-row text-[5vw] py-6 px-6 border-b"
+          onClick={() => {
+            setActiveSection("schedule");
+            setToogle(false);
+          }}
+        >
           <h1 className="mr-12">004</h1> <h1>Schedule</h1>
         </div>
-        <div className="flex flex-row text-[5vw] py-6 px-6 border-b">
+        <div
+          className="flex flex-row text-[5vw] py-6 px-6 border-b"
+          onClick={() => {
+            setActiveSection("contact");
+            setToogle(false);
+          }}
+        >
           <h1 className="mr-12">005</h1>
           <h1>Contact</h1>
         </div>

@@ -16,7 +16,7 @@ function Home({ active, setActiveSection }) {
   return (
     <section
       className={`home translate-x-0 translate-y-0 ${
-        active === "home" && "active"
+        active === "home" ? "active" : "hidden md:block"
       }`}
     >
       <div

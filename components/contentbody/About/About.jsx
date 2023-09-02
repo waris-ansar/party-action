@@ -8,7 +8,7 @@ function About({ active, setActiveSection }) {
       id="third"
       className={`opacity-100 slide-in ${
         (active === "about" || active === "contact") && "active"
-      }`}
+      } ${active !== "about" && "hidden md:block"}`}
       // style={{ transform: "translate3d(100%, 0px, 0px)" }}
     >
       <div className="sec-header" onClick={() => setActiveSection("about")}>
