@@ -21,7 +21,7 @@ function Schedule({ active, setActiveSection }) {
         </span>
       </div>
 
-      <div className="sec-body md:border-l md:grid md:grid-cols-2 text-white w-full md:mt-0 mt-20">
+      <div className="sec-body md:border-l md:grid md:grid-cols-2 text-white w-full md:mt-0 mt-20 min-h-[100vh]">
         <div className="flex justify-center items-center text-center align-middle">
           <h1 className="md:text-[40px] sm:text-[3.2rem] text-[2.5rem]  font-satoshi">
             Schedule

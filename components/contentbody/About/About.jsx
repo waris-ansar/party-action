@@ -48,6 +48,7 @@ function About({ active, setActiveSection }) {
                             <a
                               href={linkItem?.address}
                               className="text-blue-400 "
+                              target="_blank"
                             >
                               {linkItem?.name}
                             </a>

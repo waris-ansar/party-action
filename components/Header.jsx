@@ -115,10 +115,18 @@ function Header({ active, setActiveSection, toogle, setToogle }) {
           <a href="mailto:contact@partyactionpeople.com">
             <h4>EMAIL</h4>
           </a>
-          <h4>/X/</h4>
+          <h4 className="mr-2 ml-2">/</h4>
+
+          <a href="https://x.com/partyactionppl" target="_blank">
+            <h4>X</h4>
+          </a>
+          <h4 className="mr-2 ml-2">/</h4>
+
           <a href="https://t.me/partyactionpeople" target="_blank">
             <h4>TELEGRAM/</h4>
           </a>
+          <h4 className="mr-2 ml-2">/</h4>
+
           <a href="https://wa.me/6588759135" target="_blank">
             <h4>WHATSAPP</h4>
           </a>

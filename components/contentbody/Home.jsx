@@ -20,11 +20,11 @@ function Home({ active, setActiveSection }) {
       }`}
     >
       <div
-        className={`w-full flex  justify-between flex-col ${
+        className={` w-full flex  justify-between flex-col min-h-[100vh] ${
           active === "home" && "active"
         }`}
       >
-        <div className="top flex flex-col justify-center flex-1 md:min-h-[350px] min-h-screen px-6">
+        <div className=" top flex flex-col justify-center flex-1  md:min-h-[350px] min-h-screen  px-6">
           <h3 className="font-satoshi sm:text-[3.2rem] extrasm:text-[2.2rem] text-[2rem] md:leading-normal leading-tight  text-white font-medium w-fit mb-6 extrasm:mb-0">
             Technical conferences at the heart of
             <br className="block extrasm:hidden" />

@@ -88,7 +88,10 @@ function Work({ active, setActiveSection }) {
                       )}
                       {item?.list.map((list, index) => {
                         return list.length > 2 ? (
-                          <ul className="list-disc pl-6 pt-2 md:text-2xl text-xl">
+                          <ul
+                            className="list-disc pl-6 pt-2 md:text-2xl text-xl"
+                            key={index}
+                          >
                             <li key={index}>{list}</li>
                           </ul>
                         ) : (
@@ -98,10 +101,11 @@ function Work({ active, setActiveSection }) {
                           >
                             <div className="flex items-center ">
                               <p className={`md:text-2xl text-xl `}>
-                                {list.title} |
+                                {list.title}
                               </p>
+                              <p className="ml-2 mr-2">|</p>
                               <p
-                                className="ml-2 text-blue-400"
+                                className=" text-blue-400"
                                 onClick={() => {
                                   setOpen(list.titleLink);
                                 }}
