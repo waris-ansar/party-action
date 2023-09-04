@@ -1,7 +1,7 @@
 [
   {
     "key": "1",
-    "title": "What we offer to our Clients?",
+    "title": "What We Do",
     "desc": "We provide clients with full suite white label event production, including:",
     "list": [
       "Event Strategy",
@@ -15,6 +15,7 @@
       "Ticketing/CS",
       "Branding/Marketing/Sales",
       "Partnerships/PR/Media",
+      "Talent, Venue & Supplier Procurement & Management",
       "Off-ramping/payouts"
     ]
   },
@@ -30,7 +31,7 @@
 
         "items": [
           "Produced on behalf of Stake Capital Group & Curve Finance",
-          "Founders & Leaders from 15+ stablecoins, including Curve, AAVE, Maker, Circle and more.  "
+          "Founders & Leaders from 15+ stablecoins, including Curve, AAVE, Maker, Circle and more."
         ]
       },
       {
@@ -40,6 +41,7 @@
         "titleLink": "https://youtu.be/vaN0R4mrIWg",
 
         "items": [
+          "Our first & flagship event, 2 annual editions fully produced in-house.",
           "Founders & Leaders from 17+ oracle networks, including Tellor, Chronicle, Chainlink and more. "
         ]
       }
@@ -52,12 +54,11 @@
     "list": [
       {
         "key": "00",
-
         "title": "RaveQuest: A New Merge",
         "titleLink": "https://www.youtube.com/watch?v=r7_4c-lvTOc",
 
         "items": [
-          "The official afterparty of DEVCON VI in Bogota, produced on behalf of Quantstamp Inc. "
+          "The official afterparty of DEVCON VI in Bogota, produced on behalf of Quantstamp Inc."
         ]
       },
       {
@@ -65,7 +66,7 @@
 
         "title": "DeData",
         "titleLink": "https://youtu.be/YqR7hcNzvRo?si=R93jVnFLQAh6xxg1&t=30",
-        "items": []
+        "items": ["Produced for DeData Studios at Berlin Blockchain Week 2022"]
       }
     ]
   }

@@ -40,6 +40,10 @@ function Schedule({ active, setActiveSection }) {
               </div>
             );
           })}
+          <p className="md:text-2xl text-xl mt-10 font-satoshi">
+            With even more in pre-production. Contact Us to schedule your own
+            event.
+          </p>
         </div>
       </div>
     </section>

@@ -44,13 +44,6 @@ function Work({ active, setActiveSection }) {
             Our events don’t just feature leaders in DeFi, they’re built for
             them.
           </h2>
-          <p
-            className={`${blinker.className} sm:mt-10 mt-4 md:text-2xl text-xl`}
-          >
-            We create spaces for founders, CTOs, developers, students and
-            enthusiasts to collaborate and innovate in niche aspects of the
-            future of finance. 
-          </p>
         </div>
         <div className=" md:border-l overflow-auto md:h-[100vh] ">
           <div className="flex  flex-col relative md:top-[40%] md:mt-0 mt-20">

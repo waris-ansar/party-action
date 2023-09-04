@@ -37,14 +37,14 @@ function Header({ active, setActiveSection, toogle, setToogle }) {
             style={{ width: "100%" }}
           />
         </div>
-        <div className="flex justify-between items-center ">
+        <div
+          className="flex justify-between items-center "
+          onClick={() => {
+            setToogle(!toogle);
+          }}
+        >
           <h4 className="text-white mr-5">Menu</h4>
-          <div
-            className="  w-5 "
-            onClick={() => {
-              setToogle(!toogle);
-            }}
-          >
+          <div className="  w-5 ">
             <Image
               src={"/assets/images/menu.svg"}
               height={0}

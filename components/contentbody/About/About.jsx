@@ -27,7 +27,7 @@ function About({ active, setActiveSection }) {
           <div className="border-b ms:text-2xl text-xl md:mt-[20%] mt-8 md:pb-16 pb-10">
             <p className={`${blinker.className} md:mx-12 mx-4`}>
               Party Action People is a Singaporean event agency. Since 2021, we
-              have focused fully on events in the blockchain/DeFi space. 
+              have focused fully on events in the blockchain/DeFi space.
             </p>
           </div>
           <div className="md:mt-20 mt-10 md:mx-12 mx-4 md:mb-0 mb-20">

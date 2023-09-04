@@ -1,13 +1,8 @@
 [
   {
     "key": 1,
-    "title": "2023: Devconnect Istanbul",
-    "list": [
-      "unStable Summit",
-      "La Degen & More with Stake Capital Group",
-      "Meet the Oracles",
-      "Farmers Market Istanbul"
-    ]
+    "title": "Nov 2023: Devconnect Istanbul",
+    "list": ["unStable Summit", "La Degen & More with The Herd Studio"]
   },
   {
     "key": 2,
@@ -17,11 +12,7 @@
   {
     "key": 3,
     "title": "July 2024: EthCC Brussels",
-    "list": [
-      "Stable Summit",
-      "BOS24",
-      "La Degen & More with Stake Capital Group"
-    ]
+    "list": ["Stable Summit", "BOS24", "La Degen & More with The Herd Studio"]
   },
   {
     "key": 4,
