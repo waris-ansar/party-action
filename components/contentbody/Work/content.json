@@ -27,7 +27,7 @@
       {
         "key": "00",
         "title": "Stable Summit",
-        "titleLink": "https://youtu.be/jrL1asoyetE?si=OYiJ_cjDzTNickCy",
+        "titleLink": "jrL1asoyetE",
 
         "items": [
           "Produced on behalf of Stake Capital Group & Curve Finance",
@@ -36,9 +36,8 @@
       },
       {
         "key": "01",
-
         "title": "Blockchain Oracle Summit",
-        "titleLink": "https://youtu.be/vaN0R4mrIWg",
+        "titleLink": "vaN0R4mrIWg",
 
         "items": [
           "Our first & flagship event, 2 annual editions fully produced in-house.",
@@ -55,7 +54,7 @@
       {
         "key": "00",
         "title": "RaveQuest: A New Merge",
-        "titleLink": "https://www.youtube.com/watch?v=r7_4c-lvTOc",
+        "titleLink": "r7_4c-lvTOc",
 
         "items": [
           "The official afterparty of DEVCON VI in Bogota, produced on behalf of Quantstamp Inc."
@@ -65,7 +64,7 @@
         "key": "01",
 
         "title": "DeData",
-        "titleLink": "https://youtu.be/YqR7hcNzvRo?si=R93jVnFLQAh6xxg1&t=30",
+        "titleLink": "YqR7hcNzvRo",
         "items": ["Produced for DeData Studios at Berlin Blockchain Week 2022"]
       }
     ]

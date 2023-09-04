@@ -37,6 +37,28 @@ function About({ active, setActiveSection }) {
                   <h1 className="md:text-[40px] sm:text-[2.5rem] text-[2rem] md:leading-normal leading-tight  font-satoshi mt-12 cursor-pointer">
                     {item?.name}
                   </h1>
+                  <p className={`${blinker.className} text-xl`}>
+                    {item?.title}
+                  </p>
+                  <p className={`${blinker.className} text-base flex`}>
+                    {item.link?.map((linkItem, index) => {
+                      return (
+                        <div key={index} className="flex items-center">
+                          <p className="text-white inline ">
+                            <a
+                              href={linkItem?.address}
+                              className="text-blue-400 "
+                            >
+                              {linkItem?.name}
+                            </a>
+                          </p>
+                          {index < item.link.length - 1 && (
+                            <h4 className="mr-2 ml-2 flex">/</h4>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </p>
                   <p
                     className={`${blinker.className} sm:text-2xl text-xl mt-6`}
                   >

@@ -32,7 +32,7 @@ function Schedule({ active, setActiveSection }) {
             return (
               <div key={item.key} className={`${blinker.className}  text-2xl`}>
                 <h4 className="mt-6 ">{item?.title}</h4>
-                <ul className="list-disc pl-6 pt-2 md:text-2xl text-xl">
+                <ul className="list-disc pl-6 pt-2  text-xl">
                   {item?.list?.map((list, index) => {
                     return <li key={index}>{list}</li>;
                   })}
@@ -41,8 +41,16 @@ function Schedule({ active, setActiveSection }) {
             );
           })}
           <p className="md:text-2xl text-xl mt-10 font-satoshi">
-            With even more in pre-production. Contact Us to schedule your own
-            event.
+            With even more in pre-production.{" "}
+            <span
+              onClick={() => {
+                setActiveSection("contact");
+              }}
+              className="cursor-pointer underline"
+            >
+              Contact Us
+            </span>{" "}
+            to schedule your own event.
           </p>
         </div>
       </div>

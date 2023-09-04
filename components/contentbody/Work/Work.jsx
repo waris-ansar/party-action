@@ -1,11 +1,16 @@
+import "node_modules/react-modal-video/scss/modal-video.scss";
 import React, { useState } from "react";
 import Image from "next/image";
+import ModalVideo from "react-modal-video";
 import { Blinker } from "next/font/google";
 import data from "./content.json";
+
 const blinker = Blinker({ weight: ["400"], subsets: ["latin"] });
 
 function Work({ active, setActiveSection }) {
   const [openItem, setOpenItem] = useState(null);
+  const [isOpen, setOpen] = useState(null);
+
   const toggleContent = (index) => {
     if (openItem === index) {
       setOpenItem(null);
@@ -87,16 +92,24 @@ function Work({ active, setActiveSection }) {
                             <li key={index}>{list}</li>
                           </ul>
                         ) : (
-                          <div key={list.key}>
-                            <a href={list.titleLink}>
-                              <p
-                                className={`md:text-2xl text-xl ${
-                                  index > 0 && "mt-4"
-                                }`}
-                              >
-                                {list.title}
+                          <div
+                            key={list.key}
+                            className={`${index > 0 && "mt-4"}`}
+                          >
+                            <div className="flex items-center ">
+                              <p className={`md:text-2xl text-xl `}>
+                                {list.title} |
                               </p>
-                            </a>
+                              <p
+                                className="ml-2 text-blue-400"
+                                onClick={() => {
+                                  setOpen(list.titleLink);
+                                }}
+                              >
+                                Video
+                              </p>
+                            </div>
+
                             {list.items.map((listItems) => {
                               return (
                                 <ul
@@ -115,6 +128,15 @@ function Work({ active, setActiveSection }) {
                 </div>
               );
             })}
+            {isOpen && (
+              <ModalVideo
+                channel="youtube"
+                autoplay
+                isOpen={isOpen}
+                videoId={isOpen}
+                onClose={() => setOpen(null)}
+              />
+            )}
           </div>
         </div>
       </div>
