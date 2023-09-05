@@ -21,13 +21,13 @@ function Schedule({ active, setActiveSection }) {
         </span>
       </div>
 
-      <div className="sec-body md:border-l md:grid md:grid-cols-2 text-white w-full md:mt-0 mt-20 min-h-[100vh]">
+      <div className="sec-body md:border-l md:grid md:grid-cols-2 text-white w-full md:mt-0 mt-20 min-h-[100vh] ">
         <div className="flex justify-center items-center text-center align-middle">
           <h1 className="md:text-[40px] sm:text-[3.2rem] text-[2.5rem]  font-satoshi">
             Schedule
           </h1>
         </div>
-        <div className="md:border-l flex flex-col justify-center md:mb-0 mb-20 md:px-6 px-4">
+        <div className="md:border-l flex flex-col justify-center md:mb-0 mb-20 md:px-6 px-4 h-[100vh] 2xl:py-0 py-12 overflow-y-auto">
           {data?.map((item) => {
             return (
               <div key={item.key} className={`${blinker.className}  text-2xl`}>
@@ -41,7 +41,7 @@ function Schedule({ active, setActiveSection }) {
             );
           })}
           <p className="md:text-2xl text-xl mt-10 font-satoshi">
-            With even more in pre-production.{" "}
+            With even more in pre-production.
             <span
               onClick={() => {
                 setActiveSection("contact");

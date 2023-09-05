@@ -40,7 +40,7 @@ function About({ active, setActiveSection }) {
                   <p className={`${blinker.className} text-xl`}>
                     {item?.title}
                   </p>
-                  <p className={`${blinker.className} text-base flex`}>
+                  <div className={`${blinker.className} text-base flex`}>
                     {item.link?.map((linkItem, index) => {
                       return (
                         <div key={index} className="flex items-center">
@@ -59,7 +59,7 @@ function About({ active, setActiveSection }) {
                         </div>
                       );
                     })}
-                  </p>
+                  </div>
                   <p
                     className={`${blinker.className} sm:text-2xl text-xl mt-6`}
                   >

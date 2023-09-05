@@ -46,8 +46,7 @@ function Work({ active, setActiveSection }) {
       >
         <div className="flex flex-col justify-center  px-4 ">
           <h2 className="md:text-6xl sm:text-[3.2rem] sm:text-[2.5rem] text-[2rem] md:leading-tight 2xl:leading-none leading-tight  font-satoshi">
-            Our events don’t just feature leaders in DeFi, they’re built for
-            them.
+            We create spaces for leaders in DeFi.
           </h2>
         </div>
         <div className=" md:border-l overflow-auto md:h-[100vh] ">
