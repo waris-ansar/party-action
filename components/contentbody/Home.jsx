@@ -52,7 +52,7 @@ function Home({ active, setActiveSection }) {
                 style={{ width: "100%" }}
               />
             </div>
-            <div className="w-36  ml-6">
+            <div className="w-[10rem]  ml-6">
               <Image
                 src={"/assets/images/unstable.svg"}
                 width={0}
